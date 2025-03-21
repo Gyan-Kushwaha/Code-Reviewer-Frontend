@@ -14,7 +14,7 @@ function App() {
   async function reviewCode() {
     setIsLoading(true);
     try {
-      const response = await axios.post("http://localhost:3000/ai/get-review", { code });
+      const response = await axios.post("https://code-reviewer-backend-zeta.vercel.app/ai/get-review", { code });
       setReview(response.data || "No review available");
     } catch (error) {
       console.error("Error fetching review:", error);
